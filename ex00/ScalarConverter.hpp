@@ -12,9 +12,9 @@ class ScalarConverter
 {
 private:
     ScalarConverter();
-    ~ScalarConverter();
+    ~ScalarConverter(); 
 
-public:
+public:// rajouter canonique aussi
    static void convert(std::string value);
     
 };
