@@ -2,7 +2,7 @@ NAME = build
 
 
 SRCS_FILE = Base.cpp main.cpp
-HEADER_FILE = Base.hpp
+HEADER_FILE = Base.hpp A.hpp B.hpp C.hpp
 
 CC = c++
 CFLAGS = -Wall -Wextra -Werror -std=c++98
