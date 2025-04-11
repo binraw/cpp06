@@ -10,6 +10,8 @@ private:
 public:
     B();
     ~B();
+    B(const B &other);
+    B &operator=(const B &);
 };
 
 B::B()
@@ -18,6 +20,15 @@ B::B()
 
 B::~B()
 {
+}
+
+B::B(const B &other)
+{
+    *this = other;
+}
+B &B::operator=(const B &)
+{
+    return *this;
 }
 
 

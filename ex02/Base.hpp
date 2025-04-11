@@ -5,14 +5,12 @@
 #include <iostream>
 
 
-// class A;
-// class B;
-// class C;
-
 class Base
 {
 protected:
     Base();
+    Base(const Base &other);
+    Base &operator=(const Base &);
 public:
     
     virtual ~Base();

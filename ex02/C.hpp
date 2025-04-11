@@ -10,6 +10,8 @@ private:
 public:
     C();
     ~C();
+    C(const C &other);
+    C &operator=(const C &other);
 };
 
 C::C()
@@ -20,5 +22,13 @@ C::~C()
 {
 }
 
+C::C(const C &other)
+{
+    *this = other;
+}
+C &C::operator=(const C &)
+{
+    return *this;
+}
 
 #endif 

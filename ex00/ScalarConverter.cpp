@@ -8,13 +8,23 @@ ScalarConverter::~ScalarConverter()
 {
 }
 
+ScalarConverter::ScalarConverter(const ScalarConverter &other)
+{
+    *this = other;
+}
+
+ScalarConverter &ScalarConverter::operator=(const ScalarConverter &)
+{
+    return *this;
+}
+
 void ScalarConverter::convert(std::string value)
  {
     int result_int;
     float result_float;
     double result_double;
     char result_char;
-                                                                    // revoir inf car je pense quil faut surtout le gerer en nombre et pas litteral
+
     if (value == "-inff" || value == "-inf")
     {
         std::cout << "char : impossible" << std::endl;

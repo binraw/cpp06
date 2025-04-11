@@ -11,6 +11,15 @@ Base::~Base()
 {
 }
 
+Base::Base(const Base &other)
+{
+    *this = other;
+}
+Base &Base::operator=(const Base &)
+{
+    return *this;
+}
+
 
 static int random = 0;
 

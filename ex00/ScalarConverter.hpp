@@ -13,8 +13,10 @@ class ScalarConverter
 private:
     ScalarConverter();
     ~ScalarConverter(); 
+    ScalarConverter(const ScalarConverter &other);
+    ScalarConverter &operator=(const ScalarConverter &other);
 
-public:// rajouter canonique aussi
+public:
    static void convert(std::string value);
     
 };
