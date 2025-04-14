@@ -12,6 +12,7 @@ public:
     ~C();
     C(const C &other);
     C &operator=(const C &other);
+    std::string getType() const  { return "C"; }
 };
 
 C::C()

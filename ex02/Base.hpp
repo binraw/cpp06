@@ -14,7 +14,7 @@ protected:
 public:
     
     virtual ~Base();
-
+    virtual std::string getType() const = 0;
    static Base *generate(void);
    static void identify(Base* p);
    static void identify(Base& p);

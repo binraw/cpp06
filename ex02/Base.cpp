@@ -35,20 +35,12 @@ Base* Base::generate(void)
 
 void Base::identify(Base* p)
 {
-    if (dynamic_cast<A*>(p))
-        std::cout << "type of object pointed : A" << std::endl;
-    else if (dynamic_cast<B*>(p))
-        std::cout << "type of object pointed : B" << std::endl;
-    else if (dynamic_cast<C*>(p))
-        std::cout << "type of object pointed : C" << std::endl;
+    if (p)
+        std::cout << "Type of object pointed : " << p->getType() << std::endl;
+
 }
 
 void Base::identify(Base& p)
 {
-    if (dynamic_cast<A*>(&p))
-        std::cout << "type of object pointed : A" << std::endl;
-    else if (dynamic_cast<B*>(&p))
-        std::cout << "type of object pointed : B" << std::endl;
-    else if (dynamic_cast<C*>(&p))
-        std::cout << "type of object pointed : C" << std::endl;
+    std::cout << "Type of object pointed : " << p.getType() << std::endl;
 }
