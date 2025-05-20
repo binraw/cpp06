@@ -2,6 +2,9 @@
 #include "A.hpp"
 #include "B.hpp"
 #include "C.hpp"
+#include <iostream>
+#include <cstdlib>
+#include <ctime>
 
 Base::Base()
 {
@@ -21,13 +24,15 @@ Base &Base::operator=(const Base &)
 }
 
 
-static int random = 0;
+// static int random = 0;
 
 Base* Base::generate(void)
 {
-    if (random == 10 || random == 20)
+    std::srand(static_cast<unsigned int>(std::time(0)));
+    int randomInt = std::rand() % 3;
+    if (randomInt == 0)
         return new B();
-    if (random++ % 2 == 0)
+    if (randomInt == 1)
             return new A();
     else
         return new C();
