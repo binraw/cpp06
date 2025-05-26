@@ -24,8 +24,6 @@ Base &Base::operator=(const Base &)
 }
 
 
-// static int random = 0;
-
 Base* Base::generate(void)
 {
     std::srand(static_cast<unsigned int>(std::time(0)));
