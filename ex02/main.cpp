@@ -5,18 +5,16 @@
 int main(void)
 {
     Base *first;
-    Base *second;
     Base *next;
 
 
-    first = Base::generate();
-    second = Base::generate();
-    next = Base::generate();
-    Base::identify(first);
-    Base::identify(second);
-    Base::identify(*next);
-
+    first = generate();
+    next = generate();
+    std::cout << "the actual type of the object pointed to by p : " << std::endl;
+    identify(first);
+    
+    std::cout << "the actual type of the object pointed to by p with Base& : " << std::endl;
+    identify(*next);
     delete first;
-    delete second;
     delete next;
 }

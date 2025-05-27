@@ -49,7 +49,6 @@ ScalarConverter &ScalarConverter::operator=(const ScalarConverter &)
     std::cout << "float : " << result_float << "f" << std::endl;
     result_double = static_cast<double>(result_int);
     std::cout << "double : " << result_double <<  std::endl;
-
 }
  
 

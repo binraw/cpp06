@@ -13,3 +13,4 @@ int main(void)
     test = Serialization::deserialize(ptr);
     std::cout << "value de test->value : " << test->value << std::endl;
 }
+
