@@ -18,10 +18,11 @@ private:
 
 public:
    static void convert(std::string value);
-    
 };
-
-
+void convertInt(std::string value);
+void convertChar(std::string value);
+void convertDouble(std::string value);
+void convertNan();
 
 
 #endif
